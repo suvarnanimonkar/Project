@@ -1,0 +1,149 @@
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Prediction</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+
+<div class="formbold-main-wrapper">
+  
+  <div class="formbold-form-wrapper" >
+    <form action="{{url_for('predict')}}" method="POST" >
+      <center>
+      <h2   style="color: rgb(236, 15, 85)";>Employee Prediction</h2><br>
+      </center>
+
+      
+
+
+
+      
+
+      
+
+      <div class="formbold-mb-3">
+        <label class="formbold-form-label" style="color: azure";>Education</label>
+
+        <select class="formbold-form-input" name="Education" id="Education">
+          <option value="0">Bachelors</option>
+          <option value="1">Masters</option>
+          <option value="2">PHD</option>
+        </select>
+      </div>
+
+
+      <div class="formbold-mb-3">
+        <label for="JoiningYear" class="formbold-form-label" style="color: azure";> JoiningYear </label>
+        <input
+          type="text"
+          name="JoiningYear"
+          placeholder="JoiningYear"
+          class="formbold-form-input"
+        />
+      </div>
+
+      
+
+      <div class="formbold-mb-3">
+          <label class="formbold-form-label" style="color: azure";>City</label>
+  
+          <select class="formbold-form-input" name="City" id="City">
+            <option value="0">Bangalore</option>
+            <option value="2">Pune</option>
+            <option value="1">New Delhi</option>
+           
+          </select>
+        </div>
+
+
+        <div class="formbold-mb-3">
+          <label for="PaymentTier" class="formbold-form-label" style="color: azure";> PaymentTier </label>
+          <input
+            type="text"
+            name="PaymentTier"
+            placeholder="PaymentTier"
+            class="formbold-form-input"
+          />
+        </div>
+
+        <div class="formbold-mb-3">
+          <label for="age" class="formbold-form-label" style="color: azure";> Age </label>
+          <input
+            type="text"
+            name="age"
+            placeholder="age"
+            class="formbold-form-input"
+          />
+        </div>
+
+        <div class="formbold-mb-3">
+          <label class="formbold-form-label" style="color: azure";>Gender</label>
+  
+          <select class="formbold-form-input" name="Gender" id="Gender">
+            <option value="1">Male </option>
+            <option value="0">Female</option>
+          </select>
+        </div>
+
+
+
+
+        <div class="formbold-mb-3">
+          <label class="formbold-form-label" style="color: azure";>EverBenched</label>
+  
+          <select class="formbold-form-input" name="EverBenched" id="EverBenched">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </div>
+
+
+        <div class="formbold-mb-3">
+          <label class="formbold-form-label" style="color: azure";>ExperienceInCurrentDomain</label>
+  
+          <select class="formbold-form-input" name="ExperienceInCurrentDomain" id="ExperienceInCurrentDomain">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2 </option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            
+          </select>
+        </div>
+  
+      
+       
+
+<div >
+<input type="submit" class="formbold-btn" value="submit" />
+     <!-- <button class="formbold-btn" style="text-align:center;">Submit</button>-->
+
+
+
+
+    </div>
+          </form>
+          <br>
+         {% if prediction %}
+         <h3> {{prediction}}</h3>
+
+         {% endif  %}
+         </br>
+         </div>
+
+
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
